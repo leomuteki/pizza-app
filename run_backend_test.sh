@@ -1,4 +1,3 @@
 #!/bin/bash
 source backend/myvenv/Scripts/activate
-uvicorn backend.main:app
-
+python -m unittest backend.test_main
