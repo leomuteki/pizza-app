@@ -27,7 +27,7 @@ COPY next.config.ts ./
 # Set proper permissions for node_modules in the runner stage
 RUN chown -R node:node /app/node_modules
 
-EXPOSE 3000
+EXPOSE 8080
 
 # Use the "node" user to run the application
 USER node
