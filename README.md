@@ -1,13 +1,19 @@
 # Pizza App
 ## Full Stack Developer Candidate - Emilio ("Leo") Segovia
 
+### View the Deployed App
+The Frontend is deployed to: https://pizza-app-1073187497320.us-west4.run.app
+The Backend is deployed to:  https://pizza-app-backend-1073187497320.us-west4.run.app/docs
+
 ### Instruction to run locally
-1. Ensure you have python3 (developed with python 3.12.8) and Node.js (developed with node v23.6.0) on the system where you want to run the app locally.
-2. In one terminal tab, run **./run_backend.sh**
-3. Create file **frontend/pizza-app/.env.local** and save the following line in it: **NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000** (or whatever URL shows up in the backend terminal output next to **"Uvicorn running on..."**)
-4. In another terminal run **./run_frontend.sh** (May take a while to install node dependencies)
-5. Open the backend fastAPI interface by opening **http://localhost:8000/docs** in a web browser (or whatever URL shows up in the backend terminal output next to **"Uvicorn running on..."**)
-6. Open the frontend interface by opening **http://localhost:3000** in a web browser (or whatever URL shows up in the frontend terminal output next to **"Local: "**)
+1. Create file **frontend/.env.local** and save the following line in it: **NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8080**
+2. If you have docker installed, then at the root where docker-compose.yml is, run: **docker-compose up**, verify that uvicorn is running on the URL specified in **frontend/.env.local**
+3. Ensure you have python3 (developed with python 3.12.8) and Node.js (developed with node v23.6.0) on the system where you want to run the app locally.
+4. In one terminal tab, run **./run_backend.sh**
+5. Ensure that **frontend/.env.local** exists and has the line: **NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8080** (or whatever URL shows up in the backend terminal output next to **"Uvicorn running on..."**)
+6. In another terminal run **./run_frontend.sh** (May take a while to install node dependencies)
+7. Open the backend fastAPI interface by opening **http://localhost:8080/docs** in a web browser (or whatever URL shows up in the backend terminal output next to **"Uvicorn running on..."**)
+8. Open the frontend interface by opening **http://localhost:3000** in a web browser (or whatever URL shows up in the frontend terminal output next to **"Local: "**)
 
 Note that any issues with unpacking the python venv virtual environment in run_backend.sh may be impacted by your python version.
 Likewise, any issues with running **npm install** (within run_frontend.sh) may be affected by your Node version.
