@@ -9,8 +9,8 @@ import {
   getToppings,
   createTopping,
   deleteTopping,
-} from '../../lib/api';
-import { Pizza, Topping } from '../../lib/types';
+} from '../lib/api';
+import { Pizza, Topping } from '../lib/types';
 
 export default function Page() {
   const [pizzas, setPizzas] = useState<Pizza[]>([]);

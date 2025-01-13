@@ -1,36 +1,35 @@
-# Use an official Node.js image as the base
 FROM node:18-alpine AS builder
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# Set proper permissions for node_modules
+RUN chown -R node:node /app/node_modules
+
 COPY . .
 
-# Build the application
 RUN npm run build
 
-# Use a lightweight production image for the runtime
 FROM node:18-alpine AS runner
 
-# Set the working directory
 WORKDIR /app
 
 # Copy only the necessary files from the builder stage
-COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./
+COPY next.config.ts ./
 
-# Expose the port that Next.js runs on
+# Set proper permissions for node_modules in the runner stage
+RUN chown -R node:node /app/node_modules
+
 EXPOSE 3000
 
-# Start the Next.js app
+# Use the "node" user to run the application
+USER node
+
 CMD ["npm", "start"]

@@ -10,3 +10,4 @@ steps:
 images:
   - 'gcr.io/$PROJECT_ID/backend'
   - 'gcr.io/$PROJECT_ID/frontend'
+  
