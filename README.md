@@ -4,7 +4,7 @@
 ### Instruction to run locally
 1. Ensure you have python3 (developed with python 3.12.8) and Node.js (developed with node v23.6.0) on the system where you want to run the app locally.
 2. In one terminal tab, run **./run_backend.sh**
-3. In another terminal run **./run_frontend.sh**
+3. In another terminal run **./run_frontend.sh** (May take a while to install node dependencies)
 4. Open the backend fastAPI interface by opening **http://localhost:8000/docs** in a web browser
 5. Open the frontend interface by opening **http://localhost:3000** in a web browser
 
