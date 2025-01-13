@@ -89,7 +89,7 @@ export default function Page() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Pizza Management</h1>
-      <h2 style={styles.subtitle}>Full Stack Developer Candidate - Emilio ("Leo") Segovia</h2>
+      <h2 style={styles.subtitle}>Full Stack Developer Candidate - Emilio (&quot;Leo&quot;) Segovia</h2>
 
       <section style={styles.section}>
         <h2 style={styles.subtitle}>Pizzas</h2>
