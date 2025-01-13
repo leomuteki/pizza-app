@@ -1,5 +1,3 @@
-version: "3.9"  # or higher
-
 services:
   frontend:
     build: ./frontend
