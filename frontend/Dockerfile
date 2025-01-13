@@ -1,5 +1,8 @@
 FROM node:18-alpine AS builder
 
+# default backend url for cloud deployment
+ENV NEXT_PUBLIC_API_BASE_URL="https://pizza-app-backend-1073187497320.us-west4.run.app"
+
 WORKDIR /app
 
 COPY package*.json ./
