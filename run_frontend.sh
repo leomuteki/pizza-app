@@ -1,4 +1,4 @@
 #!/bin/bash
-cd frontend/pizza-app
+cd frontend
 npm install
 npm run dev
