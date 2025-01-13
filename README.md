@@ -35,3 +35,10 @@ SQLAlchemy        2.0.37     <br />
 starlette         0.41.3     <br />
 typing_extensions 4.12.2     <br />
 uvicorn           0.34.0     <br />
+
+## App Overview
+This app allows users to create/update/delete a pizza and adjust the toppings on it. It also allows users to create/update/delete toppings that are available for pizzas. For the backend I chose python because I have experience wth python backends and it's very easy to prototype with FastAPI which was perfect for efficient development. The backend implements the create/update/delete API for both pizzas and available toppings very clearly and is easy to maintain.<br/><br/>
+
+For the frontend, I chose react and used the Next.js react framework to setup the per react.dev documentation. After getting the backend working, I made a simple frontend in a single page.tsx file including all components and styles. Ideally I would break these up into modular and maintainable separate files but given the limited time I had to develop this, I implemented core functionality without frontend cleanup.<br/><br/>
+
+For the backend tests, I spent a good amount of time implementing the code but didn't have enough time to get the database to properly cleanup between tests. The unitttest framework is suppsoed to ensure the database is empty before each test but that is not the case so the tests report errrors. However, the baseline is there and shows how I would unittest. There are other frameowrks for deveoping standalone unit tests including pytest and I would use whatever my team is using. But I like how these tests can run without having to run any server.
