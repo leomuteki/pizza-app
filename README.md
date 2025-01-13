@@ -2,7 +2,7 @@
 ## Full Stack Developer Candidate - Emilio ("Leo") Segovia
 
 ### View the Deployed App
-The Frontend is deployed to: https://pizza-app-1073187497320.us-west4.run.app  (currently is not picking up environment variable to the backend - working on it) <br /> 
+The Frontend is deployed to: https://pizza-app-1073187497320.us-west4.run.app <br /> 
 The Backend is deployed to:  https://pizza-app-backend-1073187497320.us-west4.run.app/docs  <br />
 
 ### Instruction to run locally
